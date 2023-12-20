@@ -10,6 +10,13 @@ int main(){
     int flag = 0;
     int a;
 	char c;
+//Сколько весит файл
+	ifstream file("data.txt");
+	int size;
+    file.seekg (0, std::ios::end);
+    size = file.tellg();
+    file.close();
+    if (size > 0) flag = 1;
 // Открытие файла и запись его в переменную c
 	ifstream fin("data.txt");
 	fin >> c;
